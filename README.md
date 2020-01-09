@@ -7,7 +7,8 @@ Below are the environmental variables available and their default value. Overrid
 | `RTSP_URL`           | rtsp://freja.hiof.no:1935/rtplive/definst/hessdalen03.stream |
 | `FFSERVER_LOG_LEVEL` | error                                                        |
 | `FFMPEG_LOG_LEVEL`   | warning                                                      |
-| `FFMPEG_PARAM`       | `empty`                                                      |
+| `FFMPEG_INPUT_OPTS`  | `-re`                                                        |
+| `FFMPEG_OUTPUT_OPTS` | `empty`                                                        |
 
 
 #### Output
