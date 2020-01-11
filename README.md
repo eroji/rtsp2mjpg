@@ -18,3 +18,16 @@ Still snapshot: `http://<IP>:8090/still.jpg`
 
 
 *The ffserver.conf values are set for Wyze Cam V2 output. If you need to customize it you can pull the source and build with your own values.*
+
+
+#### Docker Compose
+
+- Clone the repo
+- Edit docker-compose.yaml for any customizations needed
+- Launch the containers using `docker-compose up -d`
+
+There will be an nginx container included to proxy ffserver. I find that it handles situations where the ffserver backend becomes unresponse better with a timeout reponse.
+
+With docker-compose, the output can be accessed via:
+Live stream: `http://<IP>/live.mjpg`
+Still snapshot: `http://<IP>/still.jpg`
