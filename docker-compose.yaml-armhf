@@ -11,11 +11,11 @@ services:
       # - ./ffserver.conf:/etc/ffserver.conf:ro
     environment:
       # Override the env vars below as needed
-      RTSP_URL: rtsp://octoprint:octoprint@10.64.70.46/live
+      RTSP_URL: rtsp://freja.hiof.no:1935/rtplive/definst/hessdalen03.stream
       FFSERVER_LOG_LEVEL: error
-      FFMPEG_LOG_LEVEL: warning
+      FFMPEG_LOG_LEVEL: info
       FFMPEG_INPUT_OPTS: -nostats -use_wallclock_as_timestamps 1 -thread_queue_size 2048 -probesize 25M -analyzeduration 25M -r 15
-      FFMPEG_OUTPUT_OPTS: -vsync 1
+      FFMPEG_OUTPUT_OPTS: 
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8090/still.jpg --output /dev/null || exit 1"]
       interval: 15s
