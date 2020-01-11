@@ -1,6 +1,6 @@
 FROM arm32v7/ubuntu:18.04
 RUN apt-get update && \
-    apt-get install -y ffmpeg curl && \
+    apt-get install -y --no-install-recommends ffmpeg curl && \
     apt-get clean
 COPY stream.sh /usr/bin/stream.sh
 RUN chmod +x /usr/bin/stream.sh
