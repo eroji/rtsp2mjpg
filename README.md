@@ -29,5 +29,6 @@ Still snapshot: `http://<IP>:8090/still.jpg`
 There will be an nginx container included to proxy ffserver. I find that it handles situations where the ffserver backend becomes unresponse better with a timeout reponse.
 
 With docker-compose, the output can be accessed via:
-Live stream: `http://<IP>/live.mjpg`
-Still snapshot: `http://<IP>/still.jpg`
+
+Live stream: `http://<IP>/live.mjpg`   
+Still snapshot: `http://<IP>/still.jpg`   
