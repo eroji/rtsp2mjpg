@@ -17,12 +17,12 @@ services:
       FFMPEG_INPUT_OPTS: -use_wallclock_as_timestamps 1
       FFMPEG_OUTPUT_OPTS: -async 1 -vsync 1
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8090/still.jpg --output /dev/null || exit 1"]
+      test: ["CMD-SHELL", "curl -f http://localhost:8090/still.jpg --max-time 1 --output /dev/null || exit 1"]
       interval: 15s
       timeout: 1s
       retries: 3
   nginx:
-    image: nginx:1.17.6-alpine
+    image: nginx:alpine
     restart: always
     links:
       - rtsp2mjpg
